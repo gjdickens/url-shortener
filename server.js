@@ -51,7 +51,7 @@ router.route('/')
         url.original_url = req.data;
         console.log(req.data);
         url.short_url_code = Math.random().toString(36).substr(2, 5);
-        url.short_url = 'https://gj-url-shortener.herokuapp.com/' + url.short_url_code;
+        url.short_url = 'https://gj-url-shortener.herokuapp.com/find/' + url.short_url_code;
 
         url.save(function(err) {
           if (err) {res.send(err)};
